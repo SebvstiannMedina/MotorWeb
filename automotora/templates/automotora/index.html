@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Descargar APK</title>
 </head>
 <body>
-    <h1>Bienvenido a MotorSphere</h1>
-    <p>Este es el inicio de nuestra app de vehículos.</p>
+    <h1>Descarga de la Aplicación</h1>
+
+    {% if qr_image %}
+        <p>Escanea este código QR para descargar la aplicación:</p>
+        <img src="data:image/png;base64,{{ qr_image|safe }}" alt="QR Code">
+    {% else %}
+        <p>Descarga la aplicación directamente:</p>
+        <a href="{{ apk_url }}" download>
+            <button style="padding: 10px 20px; font-size: 16px;">Descargar APK</button>
+        </a>
+    {% endif %}
 </body>
 </html>

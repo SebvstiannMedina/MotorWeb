@@ -3,7 +3,7 @@ from user_agents import parse
 import urllib.parse
 
 def index(request):
-    apk_url = 'https://github.com/SebvstiannMedina/apkmovil/raw/main/MotorSphere.apk'
+    apk_url = 'https://github.com/SebvstiannMedina/apkmovil/raw/main/Motor Sphere.apk'
     encoded_apk_url = urllib.parse.quote(apk_url)
     
     # Asegúrate de que el header HTTP_USER_AGENT existe

@@ -6,130 +6,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="MotorSphere: Una aplicación para monitorear el estado de tu automóvil, incluyendo motor, consumo de gas y batería.">
+    <meta name="description" content="MotorSphere: Una aplicación para monitorear el estado de tu automóvil, incluyendo motor, consumo de gas y batería.">
     <meta name="keywords" content="MotorSphere, automóvil, motor, batería, consumo de gas">
     <meta name="author" content="MotorSphere Team">
     <link rel="icon" type="image/x-icon" href="{% static 'assets/img/icon.png' %}">
-    <title>MotorSphere - Monitorea tu automóvil</title>
+    <title>MotorSphere - Tu Tienda Automotriz Digital</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    
 </head>
 
 <body>
-    <header class="bg-primary text-white text-center py-4">
-        <div class="d-flex flex-column align-items-center">
-            <div class="logo-container mb-2">
-                <img src="{% static 'assets/img/icon.png' %}" alt="MotorSphere Logo" class="logo">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <div class="mb-4" data-aos="zoom-in">
+                <img src="{% static 'assets/img/icon.png' %}" alt="MotorSphere Logo" class="logo floating">
             </div>
-            <h1>MotorSphere</h1>
-            <p>Monitorea el estado de tu automóvil fácilmente</p>
+            <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">MotorSphere</h1>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Tu tienda automotriz digital definitiva</p>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
     <main class="container my-5">
-        <!-- App Description -->
-        <section class="text-center mb-5">
-            <p style="color: white;" class="lead">MotorSphere es una aplicación de automóviles que te permite hacer
-                compras de tus productos en línea, sin tener la necesidad de dirigirte a un sitio web o tienda en
-                específico.</p>
-            <p style="color: white;" class="lead">Con MotorSphere, puedes: encontrar productos en línea, comprar
-                productos tales como llantas, aeromatizantes, entre otros productos.</p>
+        <!-- Features Section -->
+        <section class="features-section text-center">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card">
+                        <i class="fas fa-shopping-cart feature-icon"></i>
+                        <h3>Compra en Línea</h3>
+                        <p>Encuentra todos los productos que necesitas sin salir de casa</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <i class="fas fa-star feature-icon"></i>
+                        <h3>Productos Premium</h3>
+                        <p>Selección de productos de la más alta calidad</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <i class="fas fa-truck feature-icon"></i>
+                        <h3>Envío Rápido</h3>
+                        <p>Entrega segura y rápida a tu domicilio</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Product Carousel -->
-        <section class="mb-5">
-            <h2 class="text-center mb-4" style="color: white;">Nuestros Productos</h2>
+        <!-- Products Carousel -->
+        <section class="mb-5" data-aos="fade-up">
+            <h2 class="text-center mb-4">Nuestros Productos Destacados</h2>
             <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                <!-- Indicadores del carrusel -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
                 </div>
 
                 <div class="carousel-inner">
-                    <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <img src="{% static 'assets/img/llanta.jpg' %}" class="d-block w-100" alt="Llantas">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Llantas de Alta Calidad</h5>
-                            <p>Encuentra las mejores llantas para tu vehículo.</p>
+                        <div class="carousel-caption">
+                            <h3>Llantas Premium</h3>
+                            <p>Máximo rendimiento y seguridad para tu vehículo</p>
                         </div>
                     </div>
-                    <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <img src="{% static 'assets/img/aeromatizantes.jpeg' %}" class="d-block w-100"
-                            alt="Aromatizantes">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Aromatizantes Exclusivos</h5>
-                            <p>Mantén tu automóvil con un aroma fresco.</p>
+                        <img src="{% static 'assets/img/aeromatizantes.jpeg' %}" class="d-block w-100" alt="Aromatizantes">
+                        <div class="carousel-caption">
+                            <h3>Aromatizantes Exclusivos</h3>
+                            <p>Fragancias duraderas para tu automóvil</p>
                         </div>
                     </div>
-                    <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <img src="{% static 'assets/img/cubreasientos.jpeg' %}" class="d-block w-100"
-                            alt="Otros productos">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Otros productos</h5>
-                            <p>Encontrarás accesorios y productos de alta calidad para tu automóvil.</p>
+                        <img src="{% static 'assets/img/cubreasientos.jpeg' %}" class="d-block w-100" alt="Cubreasientos">
+                        <div class="carousel-caption">
+                            <h3>Accesorios de Lujo</h3>
+                            <p>Complementos de alta calidad para tu vehículo</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Controles del carrusel -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
         </section>
 
         <!-- Download Section -->
-        <section class="text-center">
-            <h2 class="mb-4">Descarga la Aplicación</h2>
+        <section class="download-section text-center" data-aos="fade-up">
+            <h2 class="mb-4">Descarga Nuestra Aplicación</h2>
             {% if is_mobile %}
-            <!-- Para dispositivos móviles -->
-            <p>Haz clic en el siguiente enlace para descargar la APK:</p>
-            <a href="https://github.com/SebvstiannMedina/apkmovil/raw/main/Motor_Sphere.apk"
-                class="btn btn-primary btn-lg mb-4" download="Motor_Sphere.apk">
-                Descargar APK
+            <p class="mb-4">Haz clic para descargar la última versión:</p>
+            <a href="https://github.com/SebvstiannMedina/apkmovil/raw/main/Motor_Sphere.apk" 
+               class="btn btn-custom" download="Motor_Sphere.apk">
+                <i class="fas fa-download me-2"></i>Descargar APK
             </a>
             {% else %}
-            <!-- Para PC -->
-            <p>Escanea el QR para descargar la APK:</p>
-            <div class="qr-container mb-4">
+            <p class="mb-4">Escanea el código QR para descargar:</p>
+            <div class="qr-container">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://github.com/SebvstiannMedina/apkmovil/raw/main/Motor_Sphere.apk&size=200x200"
-                    alt="QR Code para descargar MotorSphere" class="img-fluid">
+                     alt="QR Code MotorSphere" class="img-fluid">
             </div>
             {% endif %}
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2024 MotorSphere. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="mb-0">&copy; 2024 MotorSphere. Todos los derechos reservados.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>

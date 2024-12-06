@@ -9,7 +9,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #0056b3;
+    background-color: #003366;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -49,7 +49,7 @@ main {
 main h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #0056b3;
+    color: #003366;
 }
 
 main p.lead {
@@ -63,7 +63,7 @@ main img {
 
 /* Download Button */
 a.btn {
-    background-color: #007bff;
+    background-color: #003366;
     color: #fff;
     padding: 12px 30px;
     border-radius: 25px;
@@ -74,7 +74,7 @@ a.btn {
 }
 
 a.btn:hover {
-    background-color: #0056b3;
+    background-color: #003366;
 }
 
 /* Footer */
@@ -97,7 +97,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #007bff, #0056b3);
+    background: linear-gradient(90deg, #003366, #003366);
     color: white;
     padding: 2rem 0;
 }
@@ -123,7 +123,7 @@ main {
 /* App Description */
 main section p.lead {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #333;
 }
 
 /* Carousel */
@@ -153,7 +153,7 @@ main section p.lead {
 
 /* Download Section */
 section.text-center {
-    background-color: #007bff;
+    background-color: #003366;
     color: white;
     padding: 2rem;
     border-radius: 10px;
@@ -175,7 +175,7 @@ section.text-center a {
     padding: 0.8rem 2rem;
     font-size: 1.2rem;
     border-radius: 5px;
-    background-color: #0056b3;
+    background-color: #003366;
     color: white;
     text-decoration: none;
 }
@@ -221,9 +221,9 @@ footer p {
 
 
 .carousel-item img {
-    max-height: 150px; /* Limita la altura máxima de las imágenes */
+    max-height: 400px; /* Limita la altura máxima de las imágenes */
     object-fit: cover; /* Mantiene el aspecto y corta si es necesario */
-    width: 50px; /* Asegura que las imágenes ocupen todo el ancho */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -234,33 +234,3 @@ footer p {
         max-height: 250px; /* Reduce la altura en pantallas más pequeñas */
     }
 }
-
-/* Logo Styles */
-.logo-container {
-    text-align: center;
-}
-
-.logo {
-    width: 100px; /* Tamaño ideal para el ícono */
-    height: auto; /* Mantener proporción */
-    border-radius: 50%; /* Opción para redondear bordes (puedes quitar si no aplica) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade un ligero sombreado */
-    margin-bottom: 10px; /* Espaciado inferior */
-}
-
-/* Ajustes para encabezado */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 15px;
-}
-
-/* Logo responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-    .logo {
-        width: 80px; /* Reduce el tamaño en pantallas pequeñas */
-    }
-}
-

@@ -1,7 +1,8 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
 </head>
+
 <body>
     <header class="bg-primary text-white text-center py-4">
         <div class="d-flex flex-column align-items-center">
@@ -32,9 +34,11 @@
     <main class="container my-5">
         <!-- App Description -->
         <section class="text-center mb-5">
-            <p class="lead">MotorSphere es una aplicación de automóviles que te permite hacer compras de tus productos en línea, sin tener la necesidad de dirigirte a un sitio web o tienda en especifico.</p>
-            <p class="lead">Con MotorSphere, puedes: encontrar productos en línea, comprar productos tales como llantas, aeromatizantes entre otros productos.</p>
+            <p class="lead">MotorSphere es una aplicación de automóviles que te permite hacer compras de tus productos en línea, sin tener la necesidad de dirigirte a un sitio web o tienda en específico.</p>
+            <p class="lead">Con MotorSphere, puedes: encontrar productos en línea, comprar productos tales como llantas, aeromatizantes, entre otros productos.</p>
         </section>
+
+        <!-- Product Carousel -->
         <section class="mb-5">
             <h2 class="text-center mb-4">Nuestros Productos</h2>
             <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -57,14 +61,14 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <img src="{% static 'assets/img/cubreasientos.jpeg' %}" class="d-block w-100" alt="Baterías">
+                        <img src="{% static 'assets/img/cubreasientos.jpeg' %}" class="d-block w-100" alt="Otros productos">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Otros productos</h5>
-                            <p>Encontraras accesorios y productos de alta calidad para tu automóvil.</p>
+                            <p>Encontrarás accesorios y productos de alta calidad para tu automóvil.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Controles del slider -->
+                <!-- Carousel Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
@@ -75,26 +79,35 @@
                 </button>
             </div>
         </section>
+
         <!-- Download Section -->
         <section class="text-center">
             <h2 class="mb-4">Descarga la Aplicación</h2>
-
-            {% if qr_image %}
-                <p>Escanea este código QR para descargar la aplicación:</p>
-                <img src="data:image/png;base64,{{ qr_image|safe }}" alt="Código QR" class="img-fluid" style="max-width: 200px;">
+            {% if is_mobile %}
+                <!-- Para dispositivos móviles -->
+                <p>Haz clic en el siguiente enlace para descargar la APK:</p>
+                <a href="{{ apk_url }}" class="btn btn-primary btn-lg mb-4" download>
+                    Descargar APK
+                </a>
             {% else %}
-                <p>Descarga la aplicación directamente:</p>
-                <a href="{{ apk_url }}" download class="btn btn-primary btn-lg mt-3">Descargar APK</a>
+                <!-- Para PC -->
+                <p>Escanea el QR para descargar la APK:</p>
+                <div class="qr-container mb-4">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ apk_url|urlencode }}&size=200x200" 
+                         alt="QR Code para descargar MotorSphere"
+                         class="img-fluid">
+                </div>
             {% endif %}
         </section>
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>&copy; 2024 MotorSphere. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>

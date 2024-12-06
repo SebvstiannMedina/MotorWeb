@@ -2,14 +2,14 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
-    color: #333;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
 /* Header Styles */
 header {
-    background-color: #003366;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -49,7 +49,7 @@ main {
 main h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #003366;
+    color: #ffffff;
 }
 
 main p.lead {
@@ -223,7 +223,7 @@ footer p {
 .carousel-item img {
     max-height: 400px; /* Limita la altura máxima de las imágenes */
     object-fit: cover; /* Mantiene el aspecto y corta si es necesario */
-    width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
+    width: 50px; /* Asegura que las imágenes ocupen todo el ancho */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -233,4 +233,12 @@ footer p {
     .carousel-item img {
         max-height: 250px; /* Reduce la altura en pantallas más pequeñas */
     }
+}
+
+.logo {
+    width: 100px; /* Tamaño ideal para el ícono */
+    height: auto; /* Mantener proporción */
+    border-radius: 50%; /* Opción para redondear bordes (puedes quitar si no aplica) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade un ligero sombreado */
+    margin-bottom: 10px; /* Espaciado inferior */
 }

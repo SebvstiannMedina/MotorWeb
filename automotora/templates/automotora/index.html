@@ -6,14 +6,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MotorSphere: Una aplicación para monitorear el estado de tu automóvil, incluyendo motor, consumo de gas y batería.">
+    <meta name="description"
+        content="MotorSphere: Una aplicación para monitorear el estado de tu automóvil, incluyendo motor, consumo de gas y batería.">
     <meta name="keywords" content="MotorSphere, automóvil, motor, batería, consumo de gas">
     <meta name="author" content="MotorSphere Team">
 
     <title>MotorSphere - Monitorea tu automóvil</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
@@ -34,14 +36,17 @@
     <main class="container my-5">
         <!-- App Description -->
         <section class="text-center mb-5">
-            <p class="lead">MotorSphere es una aplicación de automóviles que te permite hacer compras de tus productos en línea, sin tener la necesidad de dirigirte a un sitio web o tienda en específico.</p>
-            <p class="lead">Con MotorSphere, puedes: encontrar productos en línea, comprar productos tales como llantas, aeromatizantes, entre otros productos.</p>
+            <p style="color: white;" class="lead">MotorSphere es una aplicación de automóviles que te permite hacer
+                compras de tus productos en línea, sin tener la necesidad de dirigirte a un sitio web o tienda en
+                específico.</p>
+            <p style="color: white;" class="lead">Con MotorSphere, puedes: encontrar productos en línea, comprar
+                productos tales como llantas, aeromatizantes, entre otros productos.</p>
         </section>
 
         <!-- Product Carousel -->
         <section class="mb-5">
-            <h2 class="text-center mb-4">Nuestros Productos</h2>
-            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <h2 class="text-center mb-4" style="color: white;"">Nuestros Productos</h2>
+            <div id=" productCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
@@ -53,7 +58,8 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <img src="{% static 'assets/img/aeromatizantes.jpeg' %}" class="d-block w-100" alt="Aromatizantes">
+                        <img src="{% static 'assets/img/aeromatizantes.jpeg' %}" class="d-block w-100"
+                            alt="Aromatizantes">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Aromatizantes Exclusivos</h5>
                             <p>Mantén tu automóvil con un aroma fresco.</p>
@@ -61,7 +67,8 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <img src="{% static 'assets/img/cubreasientos.jpeg' %}" class="d-block w-100" alt="Otros productos">
+                        <img src="{% static 'assets/img/cubreasientos.jpeg' %}" class="d-block w-100"
+                            alt="Otros productos">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Otros productos</h5>
                             <p>Encontrarás accesorios y productos de alta calidad para tu automóvil.</p>
@@ -69,34 +76,36 @@
                     </div>
                 </div>
                 <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
                 </button>
-            </div>
+                </div>
         </section>
 
         <!-- Download Section -->
         <section class="text-center">
             <h2 class="mb-4">Descarga la Aplicación</h2>
             {% if is_mobile %}
-                <!-- Para dispositivos móviles -->
-                <p>Haz clic en el siguiente enlace para descargar la APK:</p>
-                <a href="{{ apk_url }}" class="btn btn-primary btn-lg mb-4" download>
-                    Descargar APK
-                </a>
+            <!-- Para dispositivos móviles -->
+            <p>Haz clic en el siguiente enlace para descargar la APK:</p>
+            <a href="https://github.com/SebvstiannMedina/apkmovil/raw/main/Motor_Sphere.apk"
+                class="btn btn-primary btn-lg mb-4" download="Motor_Sphere.apk">
+                Descargar APK
+            </a>
             {% else %}
-                <!-- Para PC -->
-                <p>Escanea el QR para descargar la APK:</p>
-                <div class="qr-container mb-4">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ apk_url|urlencode }}&size=200x200" 
-                         alt="QR Code para descargar MotorSphere"
-                         class="img-fluid">
-                </div>
+            <!-- Para PC -->
+            <p>Escanea el QR para descargar la APK:</p>
+            <div class="qr-container mb-4">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://github.com/SebvstiannMedina/apkmovil/raw/main/Motor_Sphere.apk&size=200x200"
+                    alt="QR Code para descargar MotorSphere" class="img-fluid">
+            </div>
             {% endif %}
         </section>
     </main>
@@ -107,7 +116,9 @@
     </footer>
 
     <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
